@@ -443,8 +443,8 @@ a {
 }
 
 .highlight {
-    color: var(--light-purple);
-    animation: 1s glow ease-in-out infinite;
+    /*color: var(--light-purple);*/
+    /*animation: 1s glow ease-in-out infinite;*/
 }
 
 @keyframes glow {
