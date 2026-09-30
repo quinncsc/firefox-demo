@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Mozilla+Headline:wdth,wght@75..125,200..700&family=Mozilla+Text:wght@200..700&display=swap');
+:root {
+    --nav-height: 4rem;
+
+    --white: #fff;
+    --grey: #f9f9fb;
+    --black: #000;
+    --light: #f9f9fb;
+    --deep-purple: #210340;
+    --purple: #3a0f6e;
+    --soft-purple: #f1e7f8;
+    --gradient-purple: linear-gradient(to bottom, var(--deep-purple) 0%, var(--purple) 100%);
+    --gold: linear-gradient(180deg,#ffeb49 0.09%,#f60 120%);
+
+    --debug: 0px solid;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    background: black;
+    margin: 0;
+    padding: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+div.background {
+    position: fixed;
+    width: 100%;
+    height: calc(100% - var(--nav-height));
+    padding: 0;
+    margin-top: var(--nav-height);
+    background: var(--gradient-purple);
+    z-index: -99;
+}
+
+div.spacer {
+    display: flex;
+    width: 100%;
+    height: 6rem;
+
+    border: var(--debug) pink;
+}
+
+div.column {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+
+    border: var(--debug) green;
+}
+
+div.column.main {
+    gap: 4rem;
+}
+
+div.column.flex-start {
+    align-items: flex-start;
+}
+
+div.column.flex-end {
+    align-items: flex-end;
+}
+
+div.row-mini.flex-start, div.row.flex-start {
+    justify-content: flex-start;
+}
+
+div.row-mini.flex-end, div.row.flex-end {
+    justify-content: flex-end;
+}
+
+div.row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    padding: 2rem;
+    width: min(75%, 85rem);
+    gap: 8rem;
+
+    border: var(--debug) white;
+}
+
+div.row-inline {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 0.40rem;
+}
+
+div.row-mini {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+    gap: 1rem;
+
+    border: var(--debug) white;
+}
+
+div.compressed {
+    gap: 1rem; !important;
+}
+
+div.v-compressed {
+    gap: 0.1rem !important;
+}
+
+/***/
+
+div.logo {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    border: var(--debug) red;
+    z-index: 1;
+}
+
+div.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--white);
+
+    width: 100%;
+    background: var(--deep-purple);
+    height: var(--nav-height);
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 4rem;
+
+    anchor-name: --nav-bar;
+
+    border: var(--debug) red;
+}
+
+/***/
+
+img {
+    border: var(--debug) cyan;
+}
+
+div.logo img {
+    height: 2.15rem;
+    width: auto;
+}
+
+img.large {
+    height: 35rem;
+    width: auto;
+}
+
+span.icon-save {
+    content: url("other-icons/download-save-24.3eb9c275b15e.svg");
+    height: 1.00rem;
+}
+
+span.icon-chevron {
+    content: url("other-icons/chevron-down-16.e2f145363ee8.svg");
+    filter: invert(1);
+    height: 0.80rem;
+}
+
+img.icon-picto {
+    height: 4rem;
+}
+
+button {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 0.60rem;
+
+    width: 16rem;
+    height: 3rem;
+
+    background: var(--gold);
+    border-radius: 0.50rem;
+
+    color: var(--black);
+    font-size: 1.30rem;
+    font-weight: 400;
+
+    border: none;
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/***/
+
+.mz-text {
+    font-family: "Mozilla Text", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.mz-headline {
+    font-family: "Mozilla Headline", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+            "wdth" 80;
+
+
+}
+
+h1,h2,h3,a,p {
+    margin: 0;
+}
+
+.end {
+    text-align: right;
+}
+
+h1 {
+    font-size: 5.20rem;
+    line-height: 5.80rem;
+    color: var(--white);
+}
+
+h2 {
+    font-size: 3.60rem;
+    line-height: 4.80rem;
+    color: var(--white);
+}
+
+h3 {
+    font-size: 2.00rem;
+    line-height: 2.60rem;
+    color: var(--white);
+}
+
+p {
+    font-size: 1.35rem;
+    line-height: 2.00rem;
+    color: var(--grey);
+}
+
+.nav-bar p {
+    font-size: 1.15rem;
+    line-height: 2.50rem;
+}
+
+.narrow {
+    width: 80%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+div.column.compressed p {
+    font-size: 1.05rem;
+    line-height: 1.80rem;
+}
+
+a.underlined {
+    text-decoration: underline;
+    color: var(--soft-purple);
+}
