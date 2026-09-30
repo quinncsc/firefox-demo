@@ -45,7 +45,7 @@ div.spacer {
     width: 100%;
     height: 6rem;
 
-    border: var(--debug) pink;
+    outline: var(--debug) pink;
 }
 
 
@@ -59,7 +59,7 @@ div.column {
     margin: 0;
     padding: 0;
 
-    border: var(--debug) green;
+    outline: var(--debug) green;
 }
 
 div.column.main {
@@ -78,12 +78,28 @@ div.row-mini.flex-start, div.row.flex-start {
     justify-content: flex-start;
 }
 
+div.row-mini.top, div.row.top {
+    align-items: flex-start;
+}
+
+div.row-mini.edge, div.row.edge {
+    justify-content: space-between;
+}
+
 div.row-mini.flex-end, div.row.flex-end {
     justify-content: flex-end;
 }
 
 div.column.wide {
     width: 100%;
+}
+
+div.column.stretch {
+    align-items: stretch;
+}
+
+div.column.footing {
+    width: 12rem;
 }
 
 div.row {
@@ -96,7 +112,7 @@ div.row {
     width: min(75%, 85rem);
     gap: 8rem;
 
-    border: var(--debug) white;
+    outline: var(--debug) white;
 }
 
 div.row-inline {
@@ -107,7 +123,7 @@ div.row-inline {
 
     gap: 0.40rem;
 
-    border: var(--debug) grey;
+    outline: var(--debug) grey;
 }
 
 div.row-mini {
@@ -119,11 +135,26 @@ div.row-mini {
     padding: 0;
     gap: 1rem;
 
-    border: var(--debug) white;
+    outline: var(--debug) white;
+}
+
+div.row.footer {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    background: var(--deep-purple);
+}
+
+div.spacious {
+    gap: 3rem !important;
 }
 
 div.compressed {
     gap: 1rem; !important;
+}
+
+div.m-compressed {
+    gap: 0.5rem !important;
 }
 
 div.l-compressed {
@@ -140,7 +171,8 @@ div.logo {
     position: fixed;
     top: 1rem;
     left: 1rem;
-    border: var(--debug) red;
+    outline: var(--debug) red;
+    height: 2.15rem;
     z-index: 1;
 }
 
@@ -164,13 +196,13 @@ div.nav-bar {
 
     anchor-name: --nav-bar;
 
-    border: var(--debug) red;
+    outline: var(--debug) red;
 }
 
 /***/
 
 img {
-    border: var(--debug) cyan;
+    outline: var(--debug) cyan;
 }
 
 div.logo img {
@@ -184,18 +216,37 @@ img.supplement {
 }
 
 span.icon-save {
-    content: url("other-icons/download-save-24.3eb9c275b15e.svg");
+    content: url("./other-icons/download-save-24.3eb9c275b15e.svg");
     height: 1.00rem;
 }
 
 span.icon-chevron {
-    content: url("other-icons/chevron-down-16.e2f145363ee8.svg");
+    content: url("./other-icons/chevron-down-16.e2f145363ee8.svg");
     filter: invert(1);
     height: 0.80rem;
 }
 
 img.icon-picto {
     height: 4rem;
+}
+
+img.icon-globe, img.icon-drop {
+    height: 1rem;
+    filter: invert(1);
+}
+
+img.icon-globe {
+    position: absolute;
+    position-anchor: --sel-container;
+    position-area: left;
+    left: 0.50rem;
+}
+
+img.icon-drop {
+    position: absolute;
+    position-anchor: --sel-container;
+    position-area: right;
+    right: 0.50rem;
 }
 
 button {
@@ -242,11 +293,7 @@ button:hover {
 
 input {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
 
-    gap: 0.60rem;
     padding: 0 1rem;
 
     height: 2.50rem;
@@ -263,6 +310,55 @@ input {
     border: none;
     color: var(--black);
     box-shadow: 0 0 1rem var(--light-purple);
+}
+
+select#language-selector {
+    display: flex;
+
+    padding: 0 0 0 2rem;
+
+    height: 2.50rem;
+    width: 100%;
+
+    font-size: 1.15rem;
+    font-weight: 400;
+
+    outline: none;
+    border: none;
+
+    background: none;
+    outline: var(--debug) red;
+    color: var(--soft-purple);
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+div.select-container {
+    position: relative;
+    justify-content: flex-start;
+
+    anchor-name: --sel-container;
+
+    margin: 0 0 0.50rem;
+    padding: 0;
+    width: 100%;
+
+    min-height: 2.50rem;
+    flex: 1;
+
+    gap: 0.50rem;
+
+    border-radius: 0.50rem;
+
+    background: none;
+    border: 1px solid var(--soft-purple);
+    color: var(--soft-purple);
 }
 
 /***/
@@ -318,13 +414,18 @@ h3 {
 
 p, li {
     font-size: 1.35rem;
-    line-height: 2.00rem;
+    line-height: 2.10rem;
     color: var(--grey);
 }
 
 p.mini, li.mini {
     font-size: 1.10rem;
-    line-height: 1.80rem;
+    line-height: 1.60rem;
+}
+
+p.s-mini, li.s-mini {
+    font-size: 0.90rem;
+    line-height: 1.40rem;
 }
 
 .nav-bar p {
@@ -341,6 +442,17 @@ a {
     color: var(--white);
 }
 
+.highlight {
+    color: var(--light-purple);
+    animation: 1s glow ease-in-out infinite;
+}
+
+@keyframes glow {
+    0% {color: var(--light-purple)}
+    50% {color: var(--soft-purple)}
+    100% {color: var(--light-purple)}
+}
+
 div.column.compressed p, div.column.l-compressed label {
     font-size: 1.05rem;
     line-height: 1.80rem;
@@ -353,4 +465,15 @@ a.underlined {
 
 label {
     color: var(--grey);
+}
+
+label.invis {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
 }

@@ -17,3 +17,9 @@ $(window).resize(function(){
     }
 
 });
+
+let debugging = false;
+function toggleDebug() {
+    debugging = !debugging;
+    $(":root").css("--debug", debugging ? "1px solid" : "0px solid");
+}

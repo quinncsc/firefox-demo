@@ -2,8 +2,10 @@
 
 <html lang="en">
     <head>
-        <title>Firefox Redesign Demo</title>
+        <meta charset="UTF-8">
+        <title>Firefox: Reimagined</title>
         <link rel="stylesheet" href="./style.css">
+        <link rel="icon" type="image/svg" href="/other-icons/firefox-logo-symbol-fullcolor-rgb.svg">
         <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
         <script defer src="./script.js"></script>
     </head>
@@ -17,16 +19,13 @@
 
     <div class="nav-bar">
         <div class="row-inline">
-            <p class="mz-text"><a href="#">Browser</a></p>
-            <span class="icon-chevron"></span>
+            <p class="mz-text"><a href="#">Browser <span class="icon-chevron"></span></a></p>
         </div>
         <div class="row-inline">
-            <p class="mz-text"><a href="#">Features</a></p>
-            <span class="icon-chevron"></span>
+            <p class="mz-text"><a href="#">Features <span class="icon-chevron"></span></a></p>
         </div>
         <div class="row-inline">
-            <p class="mz-text"><a href="#">Resources</a></p>
-            <span class="icon-chevron"></span>
+            <p class="mz-text"><a href="#">Resources <span class="icon-chevron"></span></a></p>
         </div>
     </div>
 
@@ -167,6 +166,84 @@
 
             </div>
 
+        </div>
+
+        <div class="row footer">
+            <div class="column spacious stretch">
+                <div class="row-mini mz-text top">
+                    <div class="column m-compressed flex-start footing">
+                        <h3 class="mz-headline">Download</h3>
+                        <p class="mini"><a href="#">Download Firefox</a></p>
+                        <p class="mini"><a href="#">Windows</a></p>
+                        <p class="mini"><a href="#">macOS</a></p>
+                        <p class="mini"><a href="#">iOS</a></p>
+                        <p class="mini"><a href="#">Android</a></p>
+                        <p class="mini"><a href="#">Linux</a></p>
+                        <p class="mini"><a href="#">Custom Download Options</a></p>
+                    </div>
+                    <div class="column">
+                        <div class="column m-compressed flex-start footing">
+                            <h3 class="mz-headline">Latest Builds</h3>
+                            <p class="mini"><a href="#">Nightly</a></p>
+                            <p class="mini"><a href="#">Beta</a></p>
+                        </div>
+                        <div class="column m-compressed flex-start footing">
+                            <h3 class="mz-headline">Firefox for Business</h3>
+                            <p class="mini"><a href="#">Enterprise</a></p>
+                        </div>
+                    </div>
+                    <div class="column m-compressed flex-start footing">
+                        <h3 class="mz-headline">Community</h3>
+                        <p class="mini"><a href="#">Connect</a></p>
+                        <p class="mini"><a href="#">Contribute</a></p>
+                        <p class="mini"><a href="#">Developer</a></p>
+                    </div>
+                    <div class="column m-compressed flex-start footing">
+                        <h3 class="mz-headline">Resources</h3>
+                        <p class="mini"><a href="#">Compare</a></p>
+                        <p class="mini"><a href="#">Release Notes</a></p>
+                        <p class="mini"><a href="#">Learn</a></p>
+                        <p class="mini"><a href="#">Merch Store</a></p>
+                        <p class="mini"><a href="#">Support</a></p>
+                        <p class="mini"><a href="#">Add-ons</a></p>
+                        <p class="mini"><a href="#">Community</a></p>
+                        <p class="mini"><a href="#">Blog</a></p>
+                    </div>
+                    <div class="column m-compressed flex-start footing">
+                        <h3 class="mz-headline">Follow Us</h3>
+                        <p class="mini"><a href="#">Instagram</a></p>
+                        <p class="mini"><a href="#">YouTube</a></p>
+                        <p class="mini"><a href="#">TikTok</a></p>
+                        <p class="mini"><a href="#">Bluesky</a></p>
+                        <p class="mini"><a href="#">Podcast</a></p>
+                    </div>
+                    <div class="column m-compressed flex-start footing">
+                        <div class="select-container row-inline">
+                            <select id="language-selector">
+                                <option lang="en">English</option>
+                                <option lang="es">Español</option>
+                                <option lang="fr">Français</option>
+                                <option lang="it">Italiano</option>
+                            </select>
+                            <img class="icon-drop" src="./other-icons/chevron-down-16.e2f145363ee8.svg" alt="Language globe">
+                            <img class="icon-globe" src="./other-icons/globe-16.74af97ffa793.svg" alt="Language globe">
+                        </div>
+                        <label for="language-selector" class="invis">Language</label>
+                        <p class="mini"><a href="#">Powered by Mozilla</a></p>
+                        <p class="mini"><a href="#">Ask a Question</a></p>
+                        <p class="mini"><a class="highlight" href="mailto:break@sc.edu">Demo by Q. Breakfield</a></p>
+                        <p class="mini"><a class="highlight" href="#" onclick="toggleDebug(); return false;">Toggle Debug</a></p>
+                    </div>
+
+                </div>
+                <div class="row-mini edge mz-text top">
+                        <p class="s-mini"><a href="#">Website Privacy Notice</a></p>
+                        <p class="s-mini"><a href="#">Terms of Use</a></p>
+                        <p class="s-mini"><a href="#">Cookie Policy</a></p>
+                        <p class="s-mini"><a href="#">Community Participation Guidelines</a></p>
+                        <p class="s-mini"><a href="#">Logo Trademark Licensing</a></p>
+                </div>
+            </div>
         </div>
 
 
