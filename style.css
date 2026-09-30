@@ -412,6 +412,12 @@ h3 {
     color: var(--white);
 }
 
+ul {
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 p, li {
     font-size: 1.35rem;
     line-height: 2.10rem;
