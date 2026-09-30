@@ -3,11 +3,12 @@
     --nav-height: 4rem;
 
     --white: #fff;
-    --grey: #f9f9fb;
+    --grey: #e8e8e8;
     --black: #000;
     --light: #f9f9fb;
     --deep-purple: #210340;
     --purple: #3a0f6e;
+    --light-purple: #7543e3;
     --soft-purple: #f1e7f8;
     --gradient-purple: linear-gradient(to bottom, var(--deep-purple) 0%, var(--purple) 100%);
     --gold: linear-gradient(180deg,#ffeb49 0.09%,#f60 120%);
@@ -47,6 +48,7 @@ div.spacer {
     border: var(--debug) pink;
 }
 
+
 div.column {
     display: flex;
     flex-flow: column nowrap;
@@ -61,7 +63,7 @@ div.column {
 }
 
 div.column.main {
-    gap: 4rem;
+    gap: 7rem;
 }
 
 div.column.flex-start {
@@ -78,6 +80,10 @@ div.row-mini.flex-start, div.row.flex-start {
 
 div.row-mini.flex-end, div.row.flex-end {
     justify-content: flex-end;
+}
+
+div.column.wide {
+    width: 100%;
 }
 
 div.row {
@@ -100,6 +106,8 @@ div.row-inline {
     align-items: center;
 
     gap: 0.40rem;
+
+    border: var(--debug) grey;
 }
 
 div.row-mini {
@@ -116,6 +124,10 @@ div.row-mini {
 
 div.compressed {
     gap: 1rem; !important;
+}
+
+div.l-compressed {
+    gap: 0.2rem !important;
 }
 
 div.v-compressed {
@@ -166,7 +178,7 @@ div.logo img {
     width: auto;
 }
 
-img.large {
+img.supplement {
     height: 35rem;
     width: auto;
 }
@@ -193,8 +205,8 @@ button {
     align-items: center;
 
     gap: 0.60rem;
+    padding: 0 1rem;
 
-    width: 16rem;
     height: 3rem;
 
     background: var(--gold);
@@ -208,8 +220,49 @@ button {
     outline: none;
 }
 
+button.hollow {
+    background: none;
+    border: 1px solid var(--soft-purple);
+    color: var(--soft-purple);
+    box-shadow: 0 0 1rem var(--light-purple);
+}
+
+button.bright {
+    background: var(--soft-purple);
+    border: none;
+    box-shadow: 0 0 1rem var(--light-purple);
+    color: var(--deep-purple);
+    height: 2.50rem;
+    font-size: 1.15rem;
+}
+
 button:hover {
     cursor: pointer;
+}
+
+input {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 0.60rem;
+    padding: 0 1rem;
+
+    height: 2.50rem;
+    flex: 1;
+
+    border-radius: 0.50rem;
+
+    font-size: 1.15rem;
+    font-weight: 400;
+
+    outline: none;
+
+    background: var(--soft-purple);
+    border: none;
+    color: var(--black);
+    box-shadow: 0 0 1rem var(--light-purple);
 }
 
 /***/
@@ -241,6 +294,10 @@ h1,h2,h3,a,p {
     text-align: right;
 }
 
+.center {
+    text-align: center;
+}
+
 h1 {
     font-size: 5.20rem;
     line-height: 5.80rem;
@@ -259,10 +316,15 @@ h3 {
     color: var(--white);
 }
 
-p {
+p, li {
     font-size: 1.35rem;
     line-height: 2.00rem;
     color: var(--grey);
+}
+
+p.mini, li.mini {
+    font-size: 1.10rem;
+    line-height: 1.80rem;
 }
 
 .nav-bar p {
@@ -279,7 +341,7 @@ a {
     color: var(--white);
 }
 
-div.column.compressed p {
+div.column.compressed p, div.column.l-compressed label {
     font-size: 1.05rem;
     line-height: 1.80rem;
 }
@@ -287,4 +349,8 @@ div.column.compressed p {
 a.underlined {
     text-decoration: underline;
     color: var(--soft-purple);
+}
+
+label {
+    color: var(--grey);
 }

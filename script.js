@@ -7,12 +7,12 @@ $(window).resize(function(){
 
     if($(window).width() <= MIN_WIDTH * REM_PX) {
         if(!visible) return;
-        $(".large").addClass("hidden");
+        $(".supplement").addClass("hidden");
         visible = false;
 
     } else {
         if(visible) return;
-        $(".large").removeClass("hidden");
+        $(".supplement").removeClass("hidden");
         visible = true;
     }
 
