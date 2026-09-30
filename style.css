@@ -216,12 +216,12 @@ img.supplement {
 }
 
 span.icon-save {
-    content: url("./other-icons/download-save-24.3eb9c275b15e.svg");
+    content: url("./imgs/other-icons/download-save-24.3eb9c275b15e.svg");
     height: 1.00rem;
 }
 
 span.icon-chevron {
-    content: url("./other-icons/chevron-down-16.e2f145363ee8.svg");
+    content: url("./imgs/other-icons/chevron-down-16.e2f145363ee8.svg");
     filter: invert(1);
     height: 0.80rem;
 }
